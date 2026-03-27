@@ -1,0 +1,65 @@
+.star-border-container {
+  display: inline-block;
+  position: relative;
+  border-radius: 6px; 
+  overflow: hidden;
+  background: inherit;  
+  color: inherit;       
+  font-family: inherit; 
+  font-weight: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+.border-gradient-bottom,
+.border-gradient-top {
+  position: absolute;
+  width: 150%;          /* smaller width for smooth motion */
+  height: 2px;          /* thin line for elegance */
+  opacity: 0.5;         
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.7), transparent 20%);
+  z-index: 0;
+}
+
+.border-gradient-bottom {
+  bottom: 0;
+  left: -100%;           /* start partially off-screen */
+  animation: move-bottom 4s linear infinite;
+}
+
+.border-gradient-top {
+  top: 0;
+  left: -100%;           /* same start for symmetry */
+  animation: move-top 4s linear infinite;
+}
+
+.inner-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 26px;
+  border-radius: 6px;
+  background: inherit; 
+  color: inherit;      
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  border: 1px solid rgba(255,255,255,0.66);
+}
+
+/* Smooth horizontal movement for bottom gradient */
+@keyframes move-bottom {
+  0% { transform: translateX(0%); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+/* Smooth horizontal movement for top gradient */
+@keyframes move-top {
+  0% { transform: translateX(0%); opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}

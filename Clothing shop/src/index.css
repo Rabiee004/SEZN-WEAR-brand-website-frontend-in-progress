@@ -1,0 +1,46 @@
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global body styling */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #111; /* Dark background to blend with LiquidEther */
+  color: #fff;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Heading fonts override */
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Optional: smooth transitions for hover/focus */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Optional: anchor styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Optional: prevent text selection on buttons */
+button {
+  user-select: none;
+}
+
+/* Ensure your LiquidEther canvas fills the viewport */
+.liquidEtherCanvas {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -10; /* behind content */
+}
