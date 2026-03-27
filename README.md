@@ -1,3 +1,5 @@
+Track how it looks today via this Link: https://69c6f039cdc7b5b33c032bcf--sensational-figolla-ff25a8.netlify.app/ (Keep in mind this is under production only by me)
+
 SEZN Wear is a sleek, responsive fashion brand landing page built with React and Vite, 
 being made for an up and coming Lebanese Clothing brand.
 Although this is for a company, the main focus is to help me understand javascript and frontend concepts and organization.
